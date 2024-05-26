@@ -2,7 +2,6 @@ hexo.extend.generator.register('restful',hexo_generator_json_content);
 
 var pagination = require('hexo-pagination');
 var _pick = require('lodash.pick');
-var hexo = require('hexo')
 function filterHTMLTags(str) {
     return str ? str
             .replace(/\<(?!img|br).*?\>/g, "")
@@ -26,9 +25,10 @@ function fetchCover(str) {
     return covers ? covers[0] : null; 
 }
 
+
 function hexo_generator_json_content(site) {
     var cfg = hexo.config.hasOwnProperty('jsonContent') ? hexo.config.jsonContent : { meta: true },
-    
+
     var restful = cfg.hasOwnProperty('restful') ? cfg.restful :
         {
             site: true,

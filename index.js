@@ -1,7 +1,3 @@
-'use strict';
-
-
-
 hexo.extend.generator.register('restful',hexo_generator_json_content);
 
 var pagination = require('hexo-pagination');

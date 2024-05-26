@@ -3,7 +3,7 @@
 
 
 hexo.extend.generator.register('restful',hexo_generator_json_content);
-});
+
 var pagination = require('hexo-pagination');
 var _pick = require('lodash.pick');
 var hexo = require('hexo')

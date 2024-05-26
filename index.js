@@ -27,7 +27,7 @@ function fetchCover(str) {
 
 
 function hexo_generator_json_content(site) {
-    var cfg = hexo.config.hasOwnProperty('jsonContent') ? hexo.config.jsonContent : { meta: true };
+    var cfg = Object.assign({}, hexo.config, hexo.theme.config);
 
     var restful = cfg.hasOwnProperty('restful') ? cfg.restful :
         {

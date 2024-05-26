@@ -2,6 +2,7 @@ hexo.extend.generator.register('restful',hexo_generator_json_content);
 
 var pagination = require('hexo-pagination');
 var _pick = require('lodash.pick');
+var util = require('hexo-util');
 function filterHTMLTags(str) {
     return str ? str
             .replace(/\<(?!img|br).*?\>/g, "")
@@ -9,7 +10,7 @@ function filterHTMLTags(str) {
             .replace(/<img(.*)>/g, ' [Figure] ') : null
 }
 function minify (str) {
-    return hexo.util.stripHTML(str).trim().replace(/\n/g, ' ').replace(/\s+/g, ' ');
+    return util.stripHTML(str).trim().replace(/\n/g, ' ').replace(/\s+/g, ' ');
 }
 function fetchCovers(str) {
     var temp,

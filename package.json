@@ -12,6 +12,8 @@
     "license": "MIT",
     "dependencies": {
         "hexo-pagination": "^0.1.0",
-        "lodash.pick": "^4.4.0"
+        "lodash.pick": "^4.4.0",
+        "hexo-util": "latest",
+        "keyword-extractor": "latest"
     }
 }
